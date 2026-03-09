@@ -1,0 +1,15 @@
+统计字符串中 每个字符出现的次数。
+eg
+s = "apple"
+输出：{'a':1,'p':2,'l':1,'e':1}
+
+思路：使用字典  字符->次数
+
+def countCharacters(s):
+
+    count = {}
+
+    for c in s:
+        count[c] = count.get(c, 0) + 1
+
+    return count
