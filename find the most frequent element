@@ -1,0 +1,23 @@
+找到数组中 出现次数最多的元素。
+eg
+nums = [1,1,1,2,2,3]
+输出：1
+
+思路：使用字典统计：  数字->次数，然后找到最大的
+
+def mostFrequent(nums):
+
+    count = {}
+
+    for num in nums:
+        count[num] = count.get(num, 0) + 1
+
+    max_num = None
+    max_count = 0
+
+    for num, c in count.items():
+        if c > max_count:
+            max_count = c
+            max_num = num
+
+    return max_num
