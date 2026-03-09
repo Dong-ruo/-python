@@ -1,0 +1,28 @@
+#判断两个字符串是否是 字母异位词
+#字母相同;出现次数相同;顺序可以不同
+#eg
+s = "anagram"
+t = "nagaram"
+#输出：True
+
+###思路：统计字符出现次数，如果两个字典相同就是异位词
+
+def isAnagram(s, t):
+
+    if len(s) != len(t):
+        return False
+
+    count = {}
+
+    for c in s:
+        count[c] = count.get(c, 0) + 1
+
+    for c in t:
+        if c not in count:
+            return False
+        count[c] -= 1
+
+        if count[c] < 0:
+            return False
+
+    return True
