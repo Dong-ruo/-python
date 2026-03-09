@@ -129,7 +129,9 @@ del student["age"]
 
 1.统计次数
 
-    统计字符串中每个字符出现次数
+    count[x] = count.get(x,0) + 1
+
+ 统计字符串中每个字符出现次数
     s = "apple"
 
     count = {}
@@ -190,6 +192,7 @@ set : only value
 1.记录出现次数
 
           count[num] += 1
+          count[x] = count.get(x,0) + 1
 
 2.判断是否存在/遍历存在
 
