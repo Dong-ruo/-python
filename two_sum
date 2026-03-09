@@ -1,0 +1,18 @@
+#给定数组 nums 和目标值 target，找到 两个数的下标，使得
+#nums[i] + nums[j] = target
+#eg:
+#nums = [2,7,11,15]
+#target = 9
+#输出：[0,1]
+
+
+
+    def twoSum(nums, target):
+            hashmap = {}
+
+            for i, num in enumerate(nums):
+
+                if target - num in hashmap:
+                    return [hashmap[target-num], i]
+
+                hashmap[num] = i
